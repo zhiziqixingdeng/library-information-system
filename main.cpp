@@ -5,15 +5,15 @@
 using namespace std;
 struct book{
   string name;
-  string zz;//×÷Õß
-  int sl;//×ÜÊıÁ¿
-  int jy;//½èÔÄ¼¸±¾
+  string zz;//ä½œè€…
+  int sl;//æ€»æ•°é‡
+  int jy;//å€Ÿé˜…å‡ æœ¬
 }s[999999];
 struct tojy{
-  string mz;//Ãû×Ö
-  string phone;//ÊÖ»úºÅ
+  string mz;//åå­—
+  string phone;//æ‰‹æœºå·
   string bookname;
-  int flag;//ÊÇ·ñ¹é»¹
+  int flag;//æ˜¯å¦å½’è¿˜
 }t[999999];
 string str;
 int n,w;
@@ -22,34 +22,34 @@ void add(){
   system("cls");
   ans++;
   getline(cin,s[ans].name);
-  cout<<"ÇëÊäÈëÍ¼ÊéÃû×Ö:";
+  cout<<"è¯·è¾“å…¥å›¾ä¹¦åå­—:";
   getline(cin,s[ans].name);
-  cout<<"ÇëÊäÈëÍ¼Êé×÷Õß:";
+  cout<<"è¯·è¾“å…¥å›¾ä¹¦ä½œè€…:";
   getline(cin,s[ans].zz);
-  cout<<"ÇëÊäÈë×ÜÊıÁ¿:";
+  cout<<"è¯·è¾“å…¥æ€»æ•°é‡:";
   cin>>s[ans].sl;
-  cout<<"´´½¨Íê³É!"<<endl;
+  cout<<"åˆ›å»ºå®Œæˆ!"<<endl;
   sleep(1);
   system("cls");
   return;
 }
 void xg(){
   system("cls");
-  cout<<"ÇëÊäÈëÍ¼ÊéÃû³Æ:";
+  cout<<"è¯·è¾“å…¥å›¾ä¹¦åç§°:";
   cin.clear();
   getline(cin,str);
   int tflag;
   for(int i=1;i<=ans;i++){
     if(s[i].name==str){
-      cout<<"ÇëÊäÈë¸ÃÊéĞÂ×÷Õß:";
+      cout<<"è¯·è¾“å…¥è¯¥ä¹¦æ–°ä½œè€…:";
       getline(cin,s[i].zz);
-      cout<<"ÇëÊäÈëĞÂµÄÊıÁ¿:";
+      cout<<"è¯·è¾“å…¥æ–°çš„æ•°é‡:";
       cin>>s[i].sl;
       tflag=1;
     }
   }
   if(tflag==0){
-    cout<<"Î´ÕÒµ½Í¼Êé"<<endl;
+    cout<<"æœªæ‰¾åˆ°å›¾ä¹¦"<<endl;
     sleep(1);
   }
   else{
@@ -62,7 +62,7 @@ void xg(){
 void jymd(){
   system("cls");
   for(int i=1;i<=cnt;i++){
-    cout<<"½èÔÄÊéÃû:"<<t[i].bookname<<" µç»°:"<<t[i].phone<<endl;
+    cout<<"å€Ÿé˜…ä¹¦å:"<<t[i].bookname<<" ç”µè¯:"<<t[i].phone<<endl;
   }
   system("pause");
   system("cls");
@@ -70,18 +70,18 @@ void jymd(){
 }
 void clean(){
   system("cls");
-  cout<<"È·¶¨Âğ? 1.È·¶¨ 2.²»È·¶¨"<<endl;
+  cout<<"ç¡®å®šå—? 1.ç¡®å®š 2.ä¸ç¡®å®š"<<endl;
   cin>>w;
   if(w==1){
-    freopen("Í¼Êé.in","w",stdout);
+    freopen("å›¾ä¹¦.in","w",stdout);
     cout<<0<<endl;
-    freopen("½èÔÄ.in","w",stdout);
+    freopen("å€Ÿé˜….in","w",stdout);
     cout<<0<<endl;
     freopen("CON","w",stdout);
     return;
   }
   else{
-    cout<<"ºÃµÄ"<<endl;
+    cout<<"å¥½çš„"<<endl;
   }
   return;
 }
@@ -105,10 +105,11 @@ void cd(){
     }
 	}
   freopen("CON","r",stdin);
-  freopen("½èÔÄ.in","r",stdin);
+  freopen("å€Ÿé˜….in","r",stdin);
   cin>>cnt;
   if(cnt>=1){
   	for(int i=1;i<=cnt;i++){
+		getchar();
     getline(cin,t[i].mz);
     getline(cin,t[i].phone);
     getline(cin,t[i].bookname);
@@ -120,18 +121,18 @@ void cd(){
 }
 int main(){
 	cd();
-  cout<<"»¶Ó­Ê¹ÓÃÍ¼Êé¹ÜÀíÏµÍ³"<<endl;
+  cout<<"æ¬¢è¿ä½¿ç”¨å›¾ä¹¦ç®¡ç†ç³»ç»Ÿ"<<endl;
   sleep(1);
   system("cls");
   cin.sync();
   while(true){
-    cout<<"ÇëÊäÈë¸ÉÊ²Ã´"<<endl;
-		cout<<"0.ÍË³ö"<<endl;
-		cout<<"1.Ôö¼ÓÍ¼Êé"<<endl;
-		cout<<"2.ĞŞ¸ÄÍ¼Êé"<<endl;
-		cout<<"3.²é¿´½èÔÄÃûµ¥"<<endl;
-		cout<<"4.Çå¿ÕËùÓĞĞÅÏ¢"<<endl;
-		cout<<"5.Í¼ÊéÁĞ±í"<<endl;
+    cout<<"è¯·è¾“å…¥å¹²ä»€ä¹ˆ"<<endl;
+		cout<<"0.é€€å‡º"<<endl;
+		cout<<"1.å¢åŠ å›¾ä¹¦"<<endl;
+		cout<<"2.ä¿®æ”¹å›¾ä¹¦"<<endl;
+		cout<<"3.æŸ¥çœ‹å€Ÿé˜…åå•"<<endl;
+		cout<<"4.æ¸…ç©ºæ‰€æœ‰ä¿¡æ¯"<<endl;
+		cout<<"5.å›¾ä¹¦åˆ—è¡¨"<<endl;
 		cin.clear();
     cin>>n;
     if(n==1){
@@ -156,13 +157,13 @@ int main(){
         cout<<s[i].name<<endl<<s[i].zz<<endl<<s[i].sl<<" "<<s[i].jy<<endl;
       }
       freopen("CON","w",stdout);
-      cout<<"¸ĞĞ»Ê¹ÓÃ"<<endl;
+      cout<<"æ„Ÿè°¢ä½¿ç”¨"<<endl;
       sleep(1);
       system("cls");
       return 0;
     }
     else{
-      cout<<"´íÎó"<<endl;
+      cout<<"é”™è¯¯"<<endl;
     }
   }
 }
